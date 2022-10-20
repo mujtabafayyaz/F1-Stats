@@ -9,12 +9,12 @@ Currently the program does not have the functionality for "Driver Performance" o
 ## Setup
 1. Node must be installed on the user's machine for image scraping functionality to work, though this is not necassary for the program to work.
 2. After installing Node, open the terminal and navigate to the "server" directory inside the repository
-3. Type in the following commands:
-   _npm install express_
-   _npm install puppeteer_
-   _npm install body_parser_
+3. Type in the following commands
+* npm install express
+* npm install puppeteer
+* npm install body_parser
 4. Before opening the HTML page, navigate back to the repository directory and type the command:
-   _node server/index.js_
+* node server/index.js
 5. Now the HTML page can be opened and interacted with
 
 ## Screenshot
