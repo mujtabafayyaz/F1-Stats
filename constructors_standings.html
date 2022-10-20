@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>F1-stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="css/cs.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/F1_black.svg.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="drivers_standings.html">Drivers Standings</a></li>
+                <li><a href="constructors_standings.html">Constructors Standings</a></li>
+                <li><a href="driver_performance.html">Driver Performance</a></li>
+                <li><a href="constructor_performance.html">Constructor Performance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <input type="text" class="constructor_name" placeholder="Enter Constructor Name" id="constructor">
+    <select class="year" id="season_year"></select>
+    <script>
+        $(function(){
+            var $select = $(".year");
+            $select.append('<option value="0">Overall Standings</option>');
+            for (i=2022;i>=1950;i--){
+                $select.append($('<option></option>').val(i).html(i))
+            }
+        })
+    </script>
+    <button class="button" id="my_button">Generate Graph</button>
+
+    <div class="container">
+        <div class="image-column">
+            <img src="" class="myImage" id="constructor_image"/>
+        </div>
+        <div class ="canvas-column">
+            <canvas class="myChart" id="constructorChart" width="934" height="466"></canvas>
+        </div>
+    </div>
+    <script src="./js/cs.js"></script>
+</body>
